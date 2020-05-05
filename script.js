@@ -26,11 +26,11 @@ $.ajax({
   
   uviAPI_Call(response.coord.lat, response.coord.lon);
   
-        // $(".city").html(response.name + " (" + currentDate + " )");
-        // $(".temp").text("Temperature: " + response.main.temp +" °F");
-        // $(".humidity").text("Humidity: " + response.main.humidity + " %");
-        // $(".wind").text("Wind Speed: " + response.wind.speed + " MPH");
-        // $(".UV").text("UV Index: " + response.coord.lat, response.coord.lon)
+        $(".city").html(response.name + " (" + currentDate + " )");
+        $(".temp").text("Temperature: " + response.main.temp +" °F");
+        $(".humidity").text("Humidity: " + response.main.humidity + " %");
+        $(".wind").text("Wind Speed: " + response.wind.speed + " MPH");
+        $(".UV").text("UV Index: " + response.coord.lat, response.coord.lon)
 
 
   });
