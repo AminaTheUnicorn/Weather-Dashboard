@@ -92,10 +92,18 @@ $.ajax({
         var forecastDate = $("<h6>").text(forecastList[i].clouds.dt_txt);
        var forecastTemp = $("<p>").text("Temp: " + forecastList[i].main.temp);
        var forecastHum = $("<p>").text("Humidity: " + forecastList[i].main.humidity);
-        
-    forecastCard.append(forecastDate,forecastTemp,forecastHum);
-    forecastDiv.append(forecastCard);
+       
+      var tRow = $("<tr>");
     
+
+      tRow.append(forecastCard);
+      $("forecastDiv").append(tRow);
+
+    // forecastCard.append(forecastDate,forecastTemp,forecastHum);
+    // forecastDiv.append(forecastCard);
+    
+
+
       }
     
        }
