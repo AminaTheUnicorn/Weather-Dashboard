@@ -1,13 +1,19 @@
+$("#searchBtn").on("click", function(event){
+  event.preventDefault();
+  
+  var citySearch = $("#city-search").val().trim();
 var APIKey = "856c8252f2e2bf1bf60c5ee8bf0df557";
 
 // Here we are building the URL we need to query the database
 
+
+
 var queryWeatherURL = "https://api.openweathermap.org/data/2.5/weather?" +
-"q=Bujumbura,Burundi&units=imperial&appid=" + APIKey;
+"q=" + citySearch +"&units=imperial&appid=" + APIKey;
 
 
 
-      var forecastDiv = $(".forecastDiv");
+  var forecastDiv = $(".forecastDiv");
 
 /////// Weather ///////////////
 
@@ -66,10 +72,7 @@ $.ajax({
 
     
 
-    $("#searchBtn").on("click", function(event){
-      event.preventDefault();
 
-      var citySearch = $("#city-search").val().trim();
       var queryForcast5URL = "https://api.openweathermap.org/data/2.5/forecast?" +
       "q="+ citySearch +"&units=imperial&appid=" + APIKey;
       
@@ -83,12 +86,23 @@ $.ajax({
           console.log("response list",response.list);
     
           var forecastList = response.list;
-    
+        
+  
      for(var i = 0; i < forecastList.length; i++) {
     
       if( forecastList[i].dt_txt.indexOf("15:00:00")!==-1){
-        var forecastCard = $("<div>").addClass("card");
+        var forecastCard = $("<div>").addClass("card-body");
+        var card = $("<div>").addClass("card");
+        var cardCol = $("<div>").addClass("col-md-2");
     
+
+      var forecastDate = $("<h6>").addClass("card-title").text(forecastList[i].clouds.dt_txt);
+       var forecastTemp = $("<p>").addClass("card-text").text("Temp: " + forecastList[i].main.temp);
+       var forecastHum = $("<p>").addClass("card-text").text("Humidity: " + forecastList[i].main.humidity);
+        
+    forecastDiv.append(forecastCard);
+    forecastCard.append(forecastDate,forecastTemp,forecastHum);
+
         var forecastDate = $("<h6>").text(forecastList[i].clouds.dt_txt);
        var forecastTemp = $("<p>").text("Temp: " + forecastList[i].main.temp);
        var forecastHum = $("<p>").text("Humidity: " + forecastList[i].main.humidity);
@@ -101,6 +115,7 @@ $.ajax({
 
     // forecastCard.append(forecastDate,forecastTemp,forecastHum);
     // forecastDiv.append(forecastCard);
+
     
 
 
