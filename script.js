@@ -93,14 +93,14 @@ $.ajax({
       if( forecastList[i].dt_txt.indexOf("15:00:00")!==-1){
         var forecastCard = $("<div>").addClass("card-body");
         var card = $("<div>").addClass("card");
-        var cardCol = $("<div>").addClass("col-md-2");
+      var cardCol = $("<div>").addClass("col-md-2");
     
       var forecastDate = $("<h6>").addClass("card-title").text(forecastList[i].clouds.dt_txt);
        var forecastTemp = $("<p>").addClass("card-text").text("Temp: " + forecastList[i].main.temp);
        var forecastHum = $("<p>").addClass("card-text").text("Humidity: " + forecastList[i].main.humidity);
         
     forecastDiv.append(forecastCard);
-    forecastCard.append(forecastDate,forecastTemp,forecastHum);
+    cardCol.append(forecastDate,card,forecastHum);
     
       }
     
