@@ -13,7 +13,7 @@ var queryWeatherURL = "https://api.openweathermap.org/data/2.5/weather?" +
 
 
 
-  var forecastDiv = $(".forecastDiv");
+  var forecastDiv = $("#forecastDiv");
 
 /////// Weather ///////////////
 
@@ -81,30 +81,37 @@ $.ajax({
         method: "GET"
       })
         // We store all of the retrieved data inside of an object called "response"
-        .then(function(response) {
+        .then(function(data) {
       
-          console.log("response list",response.list);
+          console.log("data list",data.list);
     
-          var forecastList = response.list;
+          var forecastList = data.list;
         
   
-     for(var i = 0; i < forecastList.length; i++) {
+    // for(var i = 0; i < forecastList.length; i++) {
     
-      if( forecastList[i].dt_txt.indexOf("15:00:00")!==-1){
-        var forecastCard = $("<div>").addClass("card-body");
-        var card = $("<div>").addClass("card");
-      var cardCol = $("<div>").addClass("col-md-2");
+      // if(forecastList[i].dt_txt.indexOf("15:00:00")!==-1){
+        var cardCol = $("<div>").addClass("col-md-2");
+        var card = $("<div>").addClass("card bg-primary text-white");
+        var forecastCard = $("<div>").addClass("card-body p-2");
     
-      var forecastDate = $("<h6>").addClass("card-title").text(forecastList[i].clouds.dt_txt);
-       var forecastTemp = $("<p>").addClass("card-text").text("Temp: " + forecastList[i].main.temp);
-       var forecastHum = $("<p>").addClass("card-text").text("Humidity: " + forecastList[i].main.humidity);
-        
-    forecastDiv.append(forecastCard);
-    cardCol.append(forecastDate,card,forecastHum);
+      var forecastDate = $("<h6>").addClass("card-title").text(forecastList[0].dt_txt);
+       var forecastTemp = $("<p>").addClass("card-text").text("Temp: " + forecastList[0].main.temp_max);
+       var forecastHum = $("<p>").addClass("card-text").text("Humidity: " + forecastList[0].main.humidity);
+     
+       cardCol.append(card.append(forecastCard.append(forecastDate ,forecastTemp ,forecastHum)));
+       forecastDiv.append(cardCol);
+
+    // forecastDiv.append(forecastCard);
+    // cardCol.append(forecastDate,card,forecastHum);
     
-      }
+      // }
     
-       }
+       //}
        
         });
+
+        var h1 = $("<h1>")
+        h1.text("Test")
+    $(".forecast").append(h1)
     });
