@@ -84,25 +84,17 @@ $("#searchBtn").on("click", function (event) {
 
 
 
-      .then(function (data) {
-        for (var i = 0; i < data.list.length; i++) {
-            if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
-                var card = $("<div>").addClass("card");
-                var cardBody = $("<div>").addClass("card-body");
-                var title = $("<h5>")
-                    .addClass("card-title")
-                    .text(
-                        new Date(data.list[i].dt_txt).toLocaleDateString()
-                    );
-                var p1 = $("<p>")
-                    .addClass("card-text")
-                    .text("Temp: " + data.list[i].main.temp_max);
-                var p2 = $("<p>")
-                    .addClass("card-text")
-                    .text("Humidity: " + data.list[i].main.humidity);
-                card.append(cardBody.append(title, p1, p2));
-                $("#future-cards").append(card);
-            }
+    .then(function (data) {
+      for (var i = 0; i < data.list.length; i++) {
+        if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
+          var card = $("<div>").addClass("card");
+          var cardBody = $("<div>").addClass("card-body");
+          var title = $("<h5>").addClass("card-title").text(new Date(data.list[i].dt_txt).toLocaleDateString());
+          var p1 = $("<p>").addClass("card-text").text("Temp: " + data.list[i].main.temp_max);
+          var p2 = $("<p>").addClass("card-text").text("Humidity: " + data.list[i].main.humidity);
+          card.append(cardBody.append(title, p1, p2));
+          $("#future-cards").append(card);
         }
+      }
     });
 });
