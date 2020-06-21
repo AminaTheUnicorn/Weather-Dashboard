@@ -4,6 +4,11 @@ $("#searchBtn").on("click", function (event) {
   var citySearch = $("#city-search").val().trim();
   var APIKey = "856c8252f2e2bf1bf60c5ee8bf0df557";
 
+  localStorage.setItem(citySearch, citySearch);
+
+  for (var i = 0; i < localStorage.length; i++){
+    $('#list').append(`<li class="list-group-item">${localStorage.getItem(localStorage.key(i))}</li>`)
+}
   // Here we are building the URL we need to query the database
 
 
@@ -97,4 +102,10 @@ $("#searchBtn").on("click", function (event) {
         }
       }
     });
+
+
+// City Search List
+
+
+
 });
