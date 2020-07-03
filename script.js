@@ -8,7 +8,7 @@ $("#searchBtn").on("click", function (event) {
 
   for (var i = 0; i < localStorage.length; i++){
     $('#list').append(`<li class="list-group-item">${localStorage.getItem(localStorage.key(i))}</li>`)
-}
+};
   // Here we are building the URL we need to query the database
 
 
@@ -101,8 +101,9 @@ $("#searchBtn").on("click", function (event) {
           $("#future-cards").append(card);
         }
       }
+  
     });
-
+    
 
 // City Search List
 

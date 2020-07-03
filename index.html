@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <!-- font Awesome CSS -->
     <script src="https://kit.fontawesome.com/144628dd7b.js" crossorigin="anonymous"></script>
 </head>
@@ -17,68 +17,89 @@
 <body>
 
     <style>
-        .card-deck{
-        margin: 0% 0%;
+        .card-deck {
+            margin: 0% 0%;
         }
     </style>
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-3 text-center">Weather Dashboard</h1>
-        </div>
-    </div>
-    <!-- Side Search Bar -->
+    <!-- Header  -->
     <div class="container-fluid">
-        <!-- <div class="row">
-            <div class="col-md-4" style="background-color: rgb(241, 241, 241); padding: 1.5% 3%;">
-                <span style="font-weight: 500; font-size: large;">Search for a City:</span>
-                <div class="form-group" style="margin-top: 2%;">
-                    <input class=" col-md-8 form-control" id="city-search" style="float: left;">
-                    <button type="button" id="searchBtn" class="btn btn-primary "><i class="fas fa-search"></i></button>
-                </div>
-                <div id="search-list">
-                    <ul class="list-group" id="list">
-                     
-                      </ul>
-                </div>
-            </div> -->
 
-            <div class="input-group mb-5 col-3">
-                <span style="font-weight: 500; font-size: large;">Search for a City:</span>
-                <input type="text" class="form-control" id ="city-search" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text btn"  id="searchBtn"> <i class="fas fa-search"></i></span>
-                    </div>
-              </div>
-
-
-            <!-- Dashboard -->
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-body WeatherBody">
-                                <h5 class="city"><i class="fas fa-cloud"></i></h5>
-                                <p class="temp"></p>
-                                <p class="humidity"></p>
-                                <p class="wind"></p>
-                                <p class="UV"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Forecast -->
-                <h5 class="forecast">5-Day Forecast:</h5>
-                <div class="row">
-                    <div id="future-cards" class="card-deck">
-                    </div>
-                </div>
+        <div class="jumbotron jumbotron-fluid primary ">
+            <div class="container">
+                <h1 class="display-3 text-center">Weather Dashboard</h1>
+                <hr class="my-1">
             </div>
         </div>
 
+        <div class="row">
+            <!-- Side Search Bar -->
+
+
+            <div class="search-bar col-4 ">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" id="city-search" placeholder="Search City"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" id="searchBtn" type="button"><i
+                                class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+                <div id="search-list">
+                    <ul class="list-group" id="list">
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Display search -->
+            <div class="search-display col-8">
+                <div class="card">
+                    <div class="card-body WeatherBody">
+                        <!-- <h5> Search for a city!</h5> -->
+                        <h5 class="city"><i class="fas fa-cloud-sun"></i></h5>
+                        <p class="temp"></p>
+                        <p class="humidity"></p>
+                        <p class="wind"></p>
+                        <p class="UV"></p>
+                    </div>
+                </div>
+
+                <div class="search-display">
+                    <h6 class="forecast">5-Day Forecast:</h6>
+    
+                    <div id="future-cards" class="card-deck">
+                    </div>
+    
+                </div>
+            </div>
+
+        </div>
     </div>
+
+
+    <!-- Search-list -->
+
+
+    <!-- <div class=" col-4 " id="search-list">
+                <ul class="list-group" id="list">
+                 
+                  </ul>
+            </div> -->
+
+    <!-- Five card display -->
+    <!-- <div class="search-display col-7">
+                <h6 class="forecast">5-Day Forecast:</h6>
+               
+                    <div id="future-cards" class="card-deck">
+                    </div>
+
+            </div>
+        </div> -->
+
+
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Optional JavaScript -->
@@ -89,7 +110,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript">
+    </script>
     <script src="script.js"></script>
 </body>
 
