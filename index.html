@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
     <!-- font Awesome CSS -->
     <script src="https://kit.fontawesome.com/144628dd7b.js" crossorigin="anonymous"></script>
 </head>
@@ -21,15 +22,14 @@
         }
     </style>
 
-    <div class="jumbotron jumbotron-fluid" style="height: 15px; background-color: rgb(49, 48, 51);">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-            <h1 class="display-3 text-center" style="font-size: 2rem; font-weight: 500; color: white;">Weather Dashboard
-            </h1>
+            <h1 class="display-3 text-center">Weather Dashboard</h1>
         </div>
     </div>
     <!-- Side Search Bar -->
     <div class="container-fluid">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-4" style="background-color: rgb(241, 241, 241); padding: 1.5% 3%;">
                 <span style="font-weight: 500; font-size: large;">Search for a City:</span>
                 <div class="form-group" style="margin-top: 2%;">
@@ -41,7 +41,17 @@
                      
                       </ul>
                 </div>
-            </div>
+            </div> -->
+
+            <div class="input-group mb-5 col-3">
+                <span style="font-weight: 500; font-size: large;">Search for a City:</span>
+                <input type="text" class="form-control" id ="city-search" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text btn"  id="searchBtn"> <i class="fas fa-search"></i></span>
+                    </div>
+              </div>
+
+
             <!-- Dashboard -->
             <div class="col-md-8">
                 <div class="row">

@@ -92,7 +92,7 @@ $("#searchBtn").on("click", function (event) {
     .then(function (data) {
       for (var i = 0; i < data.list.length; i++) {
         if (data.list[i].dt_txt.indexOf("15:00:00") !== -1) {
-          var card = $("<div>").addClass("card");
+          var card = $("<div>").addClass("card fiveCast");
           var cardBody = $("<div>").addClass("card-body");
           var title = $("<h5>").addClass("card-title").text(new Date(data.list[i].dt_txt).toLocaleDateString());
           var p1 = $("<p>").addClass("card-text").text("Temp: " + data.list[i].main.temp_max);
