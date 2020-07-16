@@ -18,7 +18,11 @@
 - Allow users to be notified about server weather changes.
 
 ## View Site
+https://aminatheunicorn.github.io/Weather-Dashboard/
+
 ![weather dashboard demo](./Assets/weather-dash.png)
+
+
 
 
 
