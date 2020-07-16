@@ -1,10 +1,26 @@
-# 06 Server-Side APIs: Weather Dashboard
+# Weather Dashboard
 
-Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. 
+## Overview
+ A weather dashboard that will run in the browser and feature dynamically weather updates, which will allow users to view current weather in their city. With a third-party API that allows user to access their data and functionality by making requests with specific parameters to a URL. 
 
-## Usage
-W build a weather dashboard that will run in the browser and feature dynamically weather updates, which will allow users to view current weather in their city.
+## Technology Used
+
+- Javascript
+- Jquery
+- Bootstrap
+- Openweathermap API
 
 
-![weather dashboard demo](./Assets/06-server-side-apis-homework-demo.png)
+## Future Improvements
+
+- Adding functionallity to allow users to view past/future weather dates. 
+- Save searches to view later
+- Allow users to be notified about server weather changes.
+
+## View Site
+![weather dashboard demo](./Assets/weather-dash.png)
+
+
+
+
 
