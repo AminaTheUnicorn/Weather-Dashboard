@@ -26,18 +26,17 @@ h6{
     color: #586069;  
 }
 
-.uvIndex{
+/* .uvIndex{
     background-color: indianred;
     color: white;
-}
+} */
 
 
 .fiveCast{
-    color: white;
+    color:rgb(87, 87, 87);
+    background-attachment: #f1f8ff;
 }
-.card{
-    border: none;
-}
+
 .WeatherBody{
     background-color: #f6f8fa;
    
