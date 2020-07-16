@@ -20,7 +20,7 @@
 ## View Site
 https://aminatheunicorn.github.io/Weather-Dashboard/
 
-![weather dashboard demo](./Assets/weather-dash.png)
+![weather dashboard demo](./Assets/weather-dash.PNG)
 
 
 
